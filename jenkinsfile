@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+        stage('Git') {
+            steps { git 'https://github.com/reddydinesh050697/butterscotch.git' }
+        }
+	stage('Build') {
+	            steps { sh label: '', script: 'mvn clean'
+		            sh label: '', script: 'mvn install'}
+		            }
+                            }
+                            }
